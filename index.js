@@ -23,6 +23,7 @@ function generateCreatedData(data) {
     if (!created[data.SKU]) {
         created[data.SKU] = data
     } else if (created[data.SKU]) {
+        log(data, "contains a duplicate sku code, this data has been skipped")
         skipped.push(data)
     }
 }
